@@ -6,9 +6,5 @@ public class TernaryOperator {
         num1 = 25;
         num2 = (num1 == 10) ? 100 : 200;
         System.out.println("num2: " + num2);
-
-
-
-
     }
 }
