@@ -5,16 +5,16 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 public class Person {
-    public String name;
-    public String language;
-    public String job;
-    public String nationality;
-    public String country;
+    protected String name;
+    protected String language;
+    protected String job;
+    protected String nationality;
+    protected String country;
     private LocalDate dateOfBirth;
-    public final String egn;
-    public final String sex;
-    public final String religion;
-    public int age;
+    protected final String egn;
+    protected final String sex;
+    protected final String religion;
+    protected int age;
 
     Person(String name, String language, String job, String nationality, String country, String egn, String sex, String religion) {
         this.name = name;
@@ -52,10 +52,10 @@ public class Person {
 
         Person person = new Person("John", "English", "Engineer", "American", "Canada", "7004053456", "male", "Buddhism");
         person.setDateOfBirthAndAge(person.egn);
-        person.canTakeLoan(person.job);
-        person.celebrateEaster(person.religion);
-        person.isAdult(person.age);
-        person.sayHello(person.language);
+        person.canTakeLoan();
+        person.celebrateEaster();
+        person.isAdult();
+        person.sayHello();
         System.out.println(person.getDateOfBirthAndAge());
         System.out.println(person.age);
         System.out.println();
@@ -63,36 +63,36 @@ public class Person {
         Child newChild = new Child("Марти", "Bulgarian", "No", "Italian", "Bulgaria", "1111154567", "male", "Christianity");
         newChild.setDateOfBirthAndAge(newChild.egn);
         System.out.println(newChild.getDateOfBirthAndAge());
-        newChild.sayHello(newChild.language);
-        newChild.isAdult(newChild.age);
-        newChild.canTakeLoan(newChild.job);
-        newChild.likesShopskaSalad(newChild.nationality);
+        newChild.sayHello();
+        newChild.isAdult();
+        newChild.canTakeLoan();
+        newChild.likesShopskaSalad();
         System.out.println();
 
         Bulgarian bulgarian = new Bulgarian("Стоян", "Bulgarian", "Майстор", "Bulgarian", "Bulgaria", "6512125465", "мъж", "Евреин");
-        bulgarian.sayHello(bulgarian.language);
-        bulgarian.canTakeLoan(bulgarian.job);
-        bulgarian.isMaleOrFemale(bulgarian.sex);
+        bulgarian.sayHello();
+        bulgarian.canTakeLoan();
+        bulgarian.isMaleOrFemale();
         bulgarian.setDateOfBirthAndAge(bulgarian.egn);
         System.out.println(bulgarian.getDateOfBirthAndAge());
-        bulgarian.isAdult(bulgarian.age);
-        System.out.println(bulgarian.age);
-        bulgarian.celebrateEaster(bulgarian.religion);
+        bulgarian.isAdult();
+        bulgarian.celebrateEaster();
+        System.out.println();
 
         Italian italian = new Italian("Leonardo", "Italian", "Barista", "Italian", "Italy", "8709091234", "male", "judaism");
-        italian.sayHello(italian.language);
-        italian.canTakeLoan(italian.job);
-        italian.isNameFromTMNT(italian.name);
-        italian.countryOfResidence(italian.country);
+        italian.sayHello();
+        italian.canTakeLoan();
+        italian.isNameFromTMNT();
+        italian.countryOfResidence();
         italian.setDateOfBirthAndAge(italian.egn);
         System.out.println(italian.getDateOfBirthAndAge());
-        italian.isAdult(italian.age);
+        italian.isAdult();
         System.out.println("This person's age is: " + italian.age);
-        italian.celebrateEaster(italian.religion);
+        italian.celebrateEaster();
 
     }
 
-    public void sayHello(String language) {
+    public void sayHello() {
         switch (language) {
             case "Bulgarian":
                 System.out.println("Здравей!");
@@ -105,7 +105,7 @@ public class Person {
         }
     }
 
-    public void celebrateEaster(String religion) {
+    public void celebrateEaster() {
         switch (religion) {
             case "Christianity":
                 System.out.println("Yes.");
@@ -122,7 +122,7 @@ public class Person {
         }
     }
 
-    public void isAdult(int age) {
+    public void isAdult() {
         if (age >= 18) {
             System.out.println("This person is an adult.");
         } else {
@@ -130,7 +130,7 @@ public class Person {
         }
     }
 
-    public void canTakeLoan(String job) {
+    public void canTakeLoan() {
         switch (job) {
             case "Engineer":
                 System.out.println("Yes.");

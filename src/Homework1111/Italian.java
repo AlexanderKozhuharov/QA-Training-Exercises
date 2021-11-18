@@ -6,7 +6,7 @@ public class Italian extends Person {
     }
 
     @Override
-    public void canTakeLoan(String job) {
+    public void canTakeLoan() {
         switch (job) {
             case "Barista":
                 System.out.println("No.");
@@ -22,7 +22,7 @@ public class Italian extends Person {
         }
     }
 
-    public void countryOfResidence(String country) {
+    public void countryOfResidence() {
         if (country.equalsIgnoreCase("italy") && nationality.equalsIgnoreCase("italian")) {
             System.out.println("This italian lives in their home country.");
         } else {
@@ -30,7 +30,7 @@ public class Italian extends Person {
         }
     }
 
-    public void isNameFromTMNT(String name) {
+    public void isNameFromTMNT() {
         if (name.equalsIgnoreCase("michelangelo") || name.equalsIgnoreCase("donatello") || name.equalsIgnoreCase("raphael") || name.equalsIgnoreCase("leonardo")) {
             System.out.println("This italian shares a name with one of the teenage mutant ninja turtles.");
         } else {

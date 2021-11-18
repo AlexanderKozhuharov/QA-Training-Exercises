@@ -6,7 +6,7 @@ public class Bulgarian extends Person {
     }
 
     @Override
-    public void canTakeLoan(String job) {
+    public void canTakeLoan() {
         switch (job) {
             case "Майстор":
                 System.out.println("Не може да вземе заем.");
@@ -23,7 +23,7 @@ public class Bulgarian extends Person {
     }
 
     @Override
-    public void isAdult(int age) {
+    public void isAdult() {
         if (age >= 18) {
             System.out.println("Този човек е пълнолетен.");
         } else {
@@ -32,7 +32,7 @@ public class Bulgarian extends Person {
     }
 
     @Override
-    public void celebrateEaster(String religion) {
+    public void celebrateEaster() {
         switch (religion) {
             case "Християнин":
                 System.out.println("Да, празнува Великден.");
@@ -51,7 +51,7 @@ public class Bulgarian extends Person {
         }
     }
 
-    public void isMaleOrFemale(String sex) {
+    public void isMaleOrFemale() {
         if (sex.equalsIgnoreCase("мъж")) {
             System.out.println("Този българин е от мъжки пол.");
         } else if (sex.equalsIgnoreCase("жена")) {

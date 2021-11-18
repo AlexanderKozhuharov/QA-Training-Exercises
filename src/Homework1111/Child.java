@@ -9,7 +9,7 @@ public class Child extends Person {
     }
 
     @Override
-    public void sayHello(String language) {
+    public void sayHello() {
         switch (language) {
             case "Bulgarian":
                 System.out.println("Здрасти!");
@@ -24,16 +24,16 @@ public class Child extends Person {
     }
 
     @Override
-    public void isAdult(int age) {
+    public void isAdult() {
         System.out.println("This person is a child.");
     }
 
     @Override
-    public void canTakeLoan(String job) {
+    public void canTakeLoan() {
         System.out.println("This child cannot take loans.");
     }
 
-    public void likesShopskaSalad(String nationality) {
+    public void likesShopskaSalad() {
         if (this.nationality.equals("Bulgarian")) {
             System.out.println("This child likes Shopska Salad.");
         } else {
